@@ -27,7 +27,7 @@ public class Preguntas {
 	@Column
     private int tipo_respuesta;
 	@Column
-	private char status;
+	private String status;
 	@Column
 	@Temporal(TemporalType.DATE)
 	private Date fecha_actualizacion;
@@ -58,10 +58,10 @@ public class Preguntas {
 	public void setTipo_respuesta(int tipo_respuesta) {
 		this.tipo_respuesta = tipo_respuesta;
 	}
-	public char getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(char status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 	public Date getFecha_actualizacion() {

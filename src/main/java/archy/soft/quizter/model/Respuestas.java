@@ -2,6 +2,7 @@ package archy.soft.quizter.model;
 
 
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -26,12 +27,12 @@ public class Respuestas {
 	@Column
 	private String opcion;
 	@Column
-	private char tipo_opcion;
+	private String tipo_opcion;
 	@Column
-	private char status;
+	private String status;
 	@Column
 	@Temporal(TemporalType.DATE)
-	private Calendar fecha_actualizacion;  
+	private Date fecha_actualizacion;  
 	@ManyToOne
 	@JoinColumn(name = "preguntas_id")
 	Preguntas preguntas;
@@ -47,22 +48,22 @@ public class Respuestas {
 	public void setOpcion(String opcion) {
 		this.opcion = opcion;
 	}
-	public char getTipo_opcion() {
+	public String getTipo_opcion() {
 		return tipo_opcion;
 	}
-	public void setTipo_opcion(char tipo_opcion) {
+	public void setTipo_opcion(String tipo_opcion) {
 		this.tipo_opcion = tipo_opcion;
 	}
-	public char getStatus() {
+	public String getStatus() {
 		return status;
 	}
-	public void setStatus(char status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Calendar getFecha_actualizacion() {
+	public Date getFecha_actualizacion() {
 		return fecha_actualizacion;
 	}
-	public void setFecha_actualizacion(Calendar fecha_actualizacion) {
+	public void setFecha_actualizacion(Date fecha_actualizacion) {
 		this.fecha_actualizacion = fecha_actualizacion;
 	}
 	public Preguntas getPreguntas() {
