@@ -11,6 +11,6 @@ public interface UsersDAO extends CrudRepository<users, Integer>{
 	users findById(int  id);
 	@SuppressWarnings("unchecked")
 	users save(users p);
-	void delete(users p);
+	void delete(users u);
 	
 }

@@ -12,5 +12,5 @@ public interface UsersService {
 	users listarId(int id);
 	users add(users p);
 	users edit(users p);
-	users delete(int id);
+	void delete(int id);
 }

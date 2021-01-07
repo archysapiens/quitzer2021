@@ -35,13 +35,14 @@ public class UsersServiceImpl implements UsersService{
 	@Override
 	public users edit(users p) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.save(p);
 	}
 
 	@Override
-	public users delete(int id) {
+	public void delete(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		 dao.delete(listarId(id));
+		 
 	}
 	
 	
